@@ -52,6 +52,10 @@ function Carousel() {
 
   // button functionality
   leftButton.addEventListener("click", e => {
+    document.querySelector(
+      `.carousel .img${currentImg.toString()}`
+    ).style.display = "none";
+
     currentImg--;
     let wrapAround = currentImg < 1;
     if (wrapAround) currentImg = 4;
@@ -61,7 +65,11 @@ function Carousel() {
     ).style.display = "block";
   });
 
-  leftButton.addEventListener("click", e => {
+  rightButton.addEventListener("click", e => {
+    document.querySelector(
+      `.carousel .img${currentImg.toString()}`
+    ).style.display = "none";
+
     currentImg++;
     let wrapAround = currentImg > Object.keys(images).length;
     if (wrapAround) currentImg = 1;
