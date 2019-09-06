@@ -26,7 +26,7 @@ function Header() {
   header.appendChild(h1);
   header.appendChild(temp);
 
-  console.log(header);
+  //console.log(header);
 
   // * Appending to DOM
   document.querySelector(".header-container").appendChild(header);
