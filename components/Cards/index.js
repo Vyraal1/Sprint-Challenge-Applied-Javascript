@@ -23,9 +23,7 @@ axios
   .then(response => {
     const articlesList = response.data.articles;
     Object.keys(articlesList).forEach(topic => {
-      articlesList[topic].forEach(article => {
-        Card(article);
-      });
+      articlesList[topic].forEach(Card);
     });
   })
   .catch();
